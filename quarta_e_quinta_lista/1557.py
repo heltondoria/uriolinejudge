@@ -2,8 +2,11 @@ def print_matriz(matrix, size):
     width = len(str(matrix[size - 1][size - 1]))
 
     for x in range(size):
-        for num in matrix[x]:
-            print('{0:{width}}'.format(num, width=width), end=' ')
+        for i, num in enumerate(matrix[x]):
+            if i == size - 1:
+                print('{0:{width}}'.format(num, width=width), end='')
+            else:
+                print('{0:{width}}'.format(num, width=width), end=' ')
         print()
     print('')
 
